@@ -10,4 +10,5 @@ urlpatterns = [
     path('login/', TemplateView.as_view(template_name="index.html")),
     path('logout/', views.logout_request, name='logout'),
     path('register/', views.registration, name='register'),
+    path(route='get_cars', view=views.get_cars, name ='getcars'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
