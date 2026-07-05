@@ -7,9 +7,9 @@ from . import views
 app_name = 'djangoapp'
 
 urlpatterns = [
-    path('login/', TemplateView.as_view(template_name="index.html")),
-    path('logout/', views.logout_request, name='logout'),
-    path('register/', views.registration, name='register'),
+    path('login', views.login_user, name='login'),
+    path('logout', views.logout_request, name='logout'),
+    path('register', views.registration, name='register'),
     path(route='get_cars', view=views.get_cars, name ='getcars'),
     path(route='get_dealers', view=views.get_dealerships, name='get_dealers'),
     path(route='get_dealers/<str:state>', view=views.get_dealerships, name='get_dealers_by_state'),
